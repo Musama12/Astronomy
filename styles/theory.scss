@@ -1,0 +1,188 @@
+.px-em-5{
+    padding-left: 5em;
+    padding-right: 5em;
+}
+
+.sec{
+    min-height: 100vh;
+    position: relative;
+    z-index: -1;
+    background-position: center;
+    background-size: cover;
+    *{
+        z-index: 1000;
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        mix-blend-mode: overlay;
+        background-color: black;
+    }
+}
+.constant-sec {
+    background-image: url('/images/bigBangStarsBg.jpg');
+    background-size: cover;
+    section{
+        max-width:700px;
+    }
+}
+.heroBB{
+    background-image: url('/images/bigBang.jpg');
+    &::after{
+        mix-blend-mode: darken;
+        opacity: .7;
+    }
+    section{
+        max-width:500px;
+    }
+}
+.heroEV{
+    background-image: url('/images/earthTheory.jpg');
+    &::after{
+        mix-blend-mode: overlay;
+        opacity: 1;
+    }
+    section{
+        max-width:500px;
+    }
+}
+.more-theories{
+    // min-height: 100vh;
+
+    &__cardBB{
+        width: 200px;
+        height: 200px;
+        background-position: center;
+        background-size: cover;
+        background-image: url('/images/earthTheory.jpg');
+        border-radius: 20px;
+        box-shadow: 4px 4px 20px 0px rgba(255, 255, 255, 0.15);
+        transition: all .5s ease-out;
+        position: relative;
+        z-index: 1;
+
+        &::after{
+            content: '';
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            background-color: black;
+            transition: all .5s ease-out;
+            border-radius: inherit;
+            mix-blend-mode: overlay;
+        }
+    }
+  
+    &__title{
+        transform: translateX(-50%);
+        transition: all .5s ease-out;
+    }
+
+    &__cardBB:hover{
+        transform: scale(1.1);
+    }
+
+    &__cardBB:hover::after{
+        opacity: .6;
+    }
+
+    &__cardBB:hover  &__title{
+        transform: translateX(0%);
+    }
+}
+.more-theories{
+    // min-height: 100vh;
+
+    &__cardEV{
+        width: 200px;
+        height: 200px;
+        background-position: center;
+        background-size: cover;
+        background-image: url('/images/bigBang.jpg');
+        border-radius: 20px;
+        box-shadow: 4px 4px 20px 0px rgba(255, 255, 255, 0.15);
+        transition: all .5s ease-out;
+        position: relative;
+        z-index: 1;
+
+        &::after{
+            content: '';
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            background-color: black;
+            transition: all .5s ease-out;
+            border-radius: inherit;
+            mix-blend-mode: overlay;
+        }
+    }
+  
+    &__title{
+        transform: translateX(-50%);
+        transition: all .5s ease-out;
+    }
+
+    &__cardEV:hover{
+        transform: scale(1.1);
+    }
+
+    &__cardEV:hover::after{
+        opacity: .6;
+    }
+
+    &__cardEV:hover  &__title{
+        transform: translateX(0%);
+    }
+}
+.accordion{
+    position: sticky;
+    top: 70px !important;
+}
+.accordion-body a{
+    transition: color .2s linear;
+    cursor: pointer;
+}
+// effects 
+.accordion-body a:hover{
+    color: white !important;
+}
+
+// merdia querries 
+@media screen and (min-width: 1440px) {
+    .wrapper {
+      margin: auto;
+      width: 1440px !important;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+    }
+  }
+
+@media screen and (max-width:500px) {
+    .px-em-5{
+        padding-left: 2em !important;
+        padding-right: 2em !important;
+    }
+    .more-theories__title{
+        transform: translateX(0%) !important; 
+    }
+    .more-theories__cardEV::after{
+        opacity: .6 !important;
+    }
+    .more-theories__cardBB::after{
+        opacity: .6 !important;
+    }
+}

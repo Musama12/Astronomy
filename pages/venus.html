@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>planets | venus | astronomy</title>
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" rel="stylesheet" />
+
+  <!-- MDB -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"
+    defer></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+  <!-- custom css -->
+  <link rel="stylesheet" href="/styles/colors.css" />
+  <link rel="stylesheet" href="/styles/planets.css" />
+  <link rel="stylesheet" href="/styles/rotatePlanet.css" />
+  <link rel="stylesheet" href="/styles/nabar.css" />
+  <link rel="stylesheet" href="/styles/footer.css" />
+
+  <!-- gsap -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/MotionPathPlugin.min.js"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+
+  <!-- custom js -->
+
+  <script defer src="/js/planetsAnimation.js"></script>
+  <script defer src="/js/footer.js"></script>
+  <script src="/js/planersData.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!-- nav bar: -->
+
+  <link rel="stylesheet" href="/styles/nabar.css" />
+
+  <!-- loading animation: -->
+  <link rel="stylesheet" href="/styles/loading.css" />
+  <script defer src="/js/loading.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- footer: -->
+  <script defer src="/js/footer.js"></script>
+  <link rel="stylesheet" href="/styles/footer.css" />
+</head>
+
+<body ng-controller="planet">
+  <!-- loading animation  -->
+
+  <section class="loader-container">
+    <div class="loader">
+      <span style="--i: 1"></span>
+      <span style="--i: 2"></span>
+      <span style="--i: 3"></span>
+      <span style="--i: 4"></span>
+      <span style="--i: 5"></span>
+      <span style="--i: 6"></span>
+      <span style="--i: 7"></span>
+      <span style="--i: 8"></span>
+      <span style="--i: 9"></span>
+      <span style="--i: 10"></span>
+      <span style="--i: 11"></span>
+      <span style="--i: 12"></span>
+      <span style="--i: 13"></span>
+      <span style="--i: 14"></span>
+      <span style="--i: 15"></span>
+      <span style="--i: 16"></span>
+      <span style="--i: 17"></span>
+      <span style="--i: 18"></span>
+      <span style="--i: 19"></span>
+      <span style="--i: 20"></span>
+    </div>
+  </section>
+
+  <!-- nav bar  -->
+  <header ng-include="'/static/navbar.html'"></header>
+
+  <!-- hero section  -->
+  <section id="intro" class="bg-image py-5 px-em-5 sec1 bgG-light-blue my-md-0 hero vh-100">
+    <div class="rotatePlanet Venus"></div>
+    <section class="hero__content wrapper">
+      <div class="text-white">
+        <h1 class="mb-3 fs-1 text-capitalize text-opra">
+          {{planetsData.Venus.name}}
+        </h1>
+        <p class="mb-4 text-capitalize text-white-50">
+          {{planetsData.Venus.description}}
+        </p>
+      </div>
+    </section>
+  </section>
+  <!-- hero section end -->
+
+  <!-- section 2 -->
+  <section
+    class="astro px-em-5 py-5 bgG-light-blue my-md-0 sec2 g class d-flex flex-md-row flex-column align-items-center justify-content-center align-items-center">
+    <section
+      class="my-md-0 wrapper g class d-flex flex-md-row flex-column align-items-center justify-content-center align-items-center">
+      <section class="mx-md-4 m-0 content-sec2 order-md-2 order-2 my-5 my-md-0">
+        <h3 class="text-opra text-capitalize">
+          {{planetsData.Venus.sec4Heading}}
+        </h3>
+        <h4 class="text-white text-capitalize">
+          {{planetsData.Venus.diaOfEarthVal}}
+        </h4>
+        <p class="text-white-50">{{planetsData.Venus.diaOfEarthdesc}}</p>
+      </section>
+      <div class="position-relative mx-md-4 m-0 order-md-1 order-1">
+        <div style="z-index: 1000" class="scale">
+          <svg viewBox="0 0 419 117" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g class="scale-scale scale-scale-sec2">
+              <path id="Vector 1" d="M2 77.1562H415.844" stroke="#0CBABA" stroke-width="3" />
+              <path id="Vector 4" d="M2 77.1562H415.844" stroke="#0CBABA" stroke-width="3" />
+              <path id="Vector 2" d="M2 37.4822L2 116.831" stroke="#0CBABA" stroke-width="3" />
+              <path id="Vector 3" d="M416.528 37.4822L416.528 116.831" stroke="#0CBABA" stroke-width="3" />
+              <g class="value value-sec2" filter="url(#filter0_dd)">
+                <text fill="#0CBABA" xml:space="preserve" style="white-space: pre" font-family="Ropa Sans"
+                  font-size="24" letter-spacing="0em">
+                  <tspan x="40%" y="51.64">
+                    {{planetsData.Venus.diaOfEarthVal}}
+                  </tspan>
+                </text>
+              </g>
+            </g>
+            <defs>
+              <filter id="filter0_dd" x="125.711" y="19.2161" width="163.208" height="48.512"
+                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                <feOffset dy="4" />
+                <feGaussianBlur stdDeviation="2" />
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                <feOffset dy="4" />
+                <feGaussianBlur stdDeviation="2" />
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                <feBlend mode="normal" in2="effect1_dropShadow" result="effect2_dropShadow" />
+                <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow" result="shape" />
+              </filter>
+            </defs>
+          </svg>
+        </div>
+        <div class="rotatePlanet col-12 col-md-5 planet Venus planet-sec2"></div>
+      </div>
+    </section>
+  </section>
+  <!-- section 2 end -->
+
+  <!-- section 3 -->
+  <section
+    class="astro px-em-5 sec3 bgG-light-blue py-5 my-md-0 g class d-flex flex-md-row flex-column align-items-center justify-content-center align-items-center">
+    <section
+      class="my-md-0 wrapper g class d-flex flex-md-row flex-column align-items-center justify-content-center align-items-center">
+      <section class="mx-md-4 m-0 content-sec3 order-md-1 order-2 my-5 my-md-0">
+        <h3 class="text-opra text-capitalize">
+          {{planetsData.Venus.sec5Heading}}
+        </h3>
+        <h4 class="text-white text-capitalize">
+          {{planetsData.Venus.orbitTimeOfEarthVal}}
+        </h4>
+        <p class="text-white-50">
+          {{planetsData.Venus.orbitTimeOfEarthdesc}}
+        </p>
+      </section>
+      <div class="position-relative rotate-rotate-sec3 mx-md-4 m-0 order-md-2 order-1">
+        <div style="z-index: 1000" class="scale">
+          <svg class="scale-scale scale-scale-sec3" viewBox="0 0 277 433" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <g class="rotate-scale">
+              <g class="rotate-indicater">
+                <path id="Vector"
+                  d="M152.788 32.8801C152.788 32.8801 155.849 32.043 144.774 32.1482C140.807 32.1859 136.923 32.8547 133.613 34.0701C130.304 35.2854 127.717 36.9927 126.179 38.976C124.642 40.9593 124.224 43.1296 124.977 45.2124C125.73 47.2952 127.621 49.197 130.411 50.6772C133.201 52.1575 136.765 53.1498 140.651 53.5286C144.537 53.9073 148.572 53.6556 152.245 52.8053C155.917 51.9549 159.063 50.544 161.284 48.7511C163.505 46.9582 164.702 44.8638 164.723 42.7327"
+                  stroke="#0CBABA" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" />
+                <path id="Vector_2" d="M148.169 26.729L158.144 32.0212L148.063 37.5041" stroke="#0CBABA"
+                  stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+              </g>
+              <line id="Line 1" y1="-2" x2="399.775" y2="-2"
+                transform="matrix(0.009828 -0.999952 0.999955 -0.00950438 141.711 422.523)" stroke="#0CBABA"
+                stroke-width="3" />
+              <g class="value value-sec3" filter="url(#filter0_ddd)">
+                <text transform="matrix(0.00982794 -0.999952 0.999955 -0.00950444 100.501 421.337)" fill="#0CBABA"
+                  font-family="Ropa Sans" font-size="18" letter-spacing="0em" x="185.092" y="24.82">
+                  <tspan>{{planetsData.Venus.orbitTimeOfEarthVal}}</tspan>
+                </text>
+              </g>
+            </g>
+            <defs>
+              <filter id="filter0_ddd" x="105.475" y="138.986" width="30.0267" height="173.793"
+                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                <feOffset dy="4" />
+                <feGaussianBlur stdDeviation="2" />
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                <feOffset dy="4" />
+                <feGaussianBlur stdDeviation="2" />
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                <feBlend mode="normal" in2="effect1_dropShadow" result="effect2_dropShadow" />
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                <feOffset dy="4" />
+                <feGaussianBlur stdDeviation="3" />
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                <feBlend mode="normal" in2="effect2_dropShadow" result="effect3_dropShadow" />
+                <feBlend mode="normal" in="SourceGraphic" in2="effect3_dropShadow" result="shape" />
+              </filter>
+            </defs>
+          </svg>
+        </div>
+        <div class="rotatePlanet col-12 col-md-5 planet Venus planet-sec3"></div>
+      </div>
+    </section>
+  </section>
+  <!-- section 3 end -->
+
+  <!-- section 4  -->
+  <section class="astro bgG-light-blue d-flex sec4 py-5 my-md-0 align-items-center justify-content-between px-em-5 g">
+    <section
+      class="d-flex w-100 row flex-md-row flex-column align-items-center justify-content-center align-items-center wrapper">
+      <section class="m-0 col-md-8 col-12 content-sec4 order-md-2 order-2 my-5 my-md-0">
+        <h3 class="text-opra text-capitalize">
+          {{planetsData.Venus.sec6Heading}}
+        </h3>
+        <h4 class="text-white text-capitalize">
+          {{planetsData.Venus.revolOfEarthVal}}
+        </h4>
+        <p class="text-white-50">{{planetsData.Venus.revolOfEarthdesc}}</p>
+      </section>
+      <div
+        class="position-relative transform-reset m-0 col-md-4 col-12 justify-content-center align-items-center d-flex flex-column order-md-0 order-1">
+        <div style="z-index: 1000; width: 256px" class="">
+          <svg class="scale-scale scale-scale-sec4" viewBox="0 0 514 514" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <g class="earth-revolution">
+              <g>
+                <mask id="path-1-inside-1" fill="white">
+                  <path class="earth-path"
+                    d="M514 257C514 398.937 398.937 514 257 514C115.063 514 0 398.937 0 257C0 115.063 115.063 0 257 0C398.937 0 514 115.063 514 257Z" />
+                </mask>
+                <path
+                  d="M514 257C514 398.937 398.937 514 257 514C115.063 514 0 398.937 0 257C0 115.063 115.063 0 257 0C398.937 0 514 115.063 514 257Z"
+                  stroke="#12A1A4" stroke-width="5" mask="url(#path-1-inside-1)" />
+              </g>
+            </g>
+            <defs>
+              <filter id="filter0_dd" x="128.12" y="88.5601" width="256.741" height="40.016"
+                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                <feOffset dy="4" />
+                <feGaussianBlur stdDeviation="2" />
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                <feOffset dy="4" />
+                <feGaussianBlur stdDeviation="2" />
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                <feBlend mode="normal" in2="effect1_dropShadow" result="effect2_dropShadow" />
+                <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow" result="shape" />
+              </filter>
+            </defs>
+          </svg>
+        </div>
+        <div class="rotatePlanet small-earth col-12 col-md-5 planet Venus planet-sec4"></div>
+        <img id="sun1" src="/images/sun.png" alt="" srcset="" />
+        <p style="width: 3em" class="position-absolute value-sec4 text-opra fw-bolder valueInd">
+          {{planetsData.Venus.revolOfEarthVal}}
+        </p>
+      </div>
+    </section>
+  </section>
+  <!-- section 4 end -->
+
+  <!-- section 5 start -->
+  <section
+    class="astro m-0 bgG-light-blue sec5 py-5 my-md-0 align-items-center justify-content-between px-em-5 g class">
+    <section
+      class="d-flex w-100 row flex-md-row flex-column align-items-center justify-content-center align-items-center wrapper">
+      <section class="m-0 col-md-8 col-12 content-sec5 order-md-1 order-2 my-5 my-md-0">
+        <h3 class="text-opra text-capitalize">
+          {{planetsData.Venus.sec7Heading}}
+        </h3>
+        <h4 class="text-white text-capitalize">
+          {{planetsData.Venus.distOfEarthVal}}
+        </h4>
+        <p class="text-white-50">{{planetsData.Venus.distOfEarthdesc}}</p>
+      </section>
+      <div class="m-0 col-md-3 col-12 justify-content-center align-items-center d-flex flex-column order-md-2 order-1">
+        <div style="transform: rotate(-20deg) translateX(40px) !important" class="d-flex h-100 position-relative">
+          <div class="rotatePlanet small-earth planet Venus planet-sec5"></div>
+          <div style="z-index: 1000">
+            <span class="value-dist value-sec5">{{planetsData.Venus.distOfEarthVal}}</span>
+
+            <svg class="scale-scale" width="120" height="42" viewBox="0 0 114 42" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <g id="dist">
+                <g id="value" filter="url(#filter0_dd)">
+                  <text transform="translate(8.33679 1.51135) rotate(-0.50001)" fill="#0CBABA" xml:space="preserve"
+                    style="white-space: pre" font-family="Ropa Sans" font-size="9" letter-spacing="0em">
+                    <tspan x="0" y="19.49">0.983-1.017 AU</tspan>
+                  </text>
+                </g>
+                <g id="scale" class="scale-scale-sec5">
+                  <path id="Vector 1" d="M0.772095 27.5792L110.021 27.5792" stroke="#0CBABA" stroke-width="3" />
+                  <path id="value-sec7-path" d="M2.20032 12.1042L2.20032 41.1042" stroke="#0CBABA" stroke-width="3" />
+                  <path id="Vector 3" d="M111.63 12.1042L111.63 41.1042" stroke="#0CBABA" stroke-width="3" />
+                </g>
+              </g>
+              <defs>
+                <filter id="filter0_dd" x="5.60815" y="7.89685" width="101.306" height="20.7907"
+                  filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                  <feOffset dy="4" />
+                  <feGaussianBlur stdDeviation="2" />
+                  <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                  <feOffset dy="4" />
+                  <feGaussianBlur stdDeviation="2" />
+                  <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                  <feBlend mode="normal" in2="effect1_dropShadow" result="effect2_dropShadow" />
+                  <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow" result="shape" />
+                </filter>
+              </defs>
+            </svg>
+          </div>
+
+          <img style="
+                position: unset !important;
+                width: 141.75px;
+                height: 141.75px;
+                position: unset !important;
+                transform: translateY(-30%);
+              " id="sun2" src="/images/sun.png" alt="" srcset="" />
+        </div>
+      </div>
+    </section>
+  </section>
+  <!-- section 5 end-->
+  <!-- footer  -->
+  <footer class="footer d-flex justify-content-center flex-column">
+    <div class="footer__container mx-5 mt-5 mb-3 d-flex flex-column flex-md-row justify-content-md-between">
+      <div class="footer__useFulLinks mx-4 d-flex flex-column">
+        <h5 style="letter-spacing: 0.2em" class="text-uppercase text-opra d-block">
+          useful links
+        </h5>
+        <div class="footer__links d-flex flex-column">
+          <a href="/pages/index.html" class="text-capitalize text-white-50 text-decoration-none my-2">home</a>
+          <a href="/pages/contactus.html" class="text-capitalize text-white-50 text-decoration-none my-2">contact us</a>
+          <div class="text-capitalize text-white-50 my-2">
+            <div style="cursor: pointer" class="d-flex hover align-items-center">
+              <a href="/pages/discoveries.html" class="text-capitalize text-white-50">discovries</a>
+            </div>
+          </div>
+          <div class="text-capitalize text-white-50 my-2">
+            <div style="cursor: pointer" class="d-flex hover align-items-center">
+              <a href="/pages/top-5-observatories.html" class="text-capitalize text-white-50">observatories</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__socialLinks mx-4 d-flex flex-column">
+        <h5 style="letter-spacing: 0.2em" class="text-uppercase text-opra">
+          follow us
+        </h5>
+        <div class="footer__links d-flex flex-column">
+          <a href="https://www.facebook.com/" target="_blank"
+            class="text-capitalize align-items-center d-flex text-white-50 text-decoration-none my-3">
+            <i class="fab fa-facebook"></i>
+            <span class="mx-2 text-capitalize text-white-50">facebook</span>
+          </a>
+          <a href="https://twitter.com/" target="_blank"
+            class="text-capitalize align-items-center d-flex text-white-50 text-decoration-none my-3">
+            <i class="fab fa-twitter"></i>
+            <span class="mx-2 text-capitalize text-white-50">twitter</span>
+          </a>
+          <a href="https://www.linkedin.com/" target="_blank"
+            class="text-capitalize align-items-center d-flex text-white-50 text-decoration-none my-3">
+            <i class="fab fa-linkedin"></i>
+            <span class="mx-2 text-capitalize text-white-50">linkedIn</span>
+          </a>
+        </div>
+      </div>
+      <div class="footer__contactLinks mx-4 d-flex flex-column">
+        <h5 style="letter-spacing: 0.2em" class="text-uppercase text-opra">
+          get in touch
+        </h5>
+        <div class="footer__links d-flex flex-column">
+          <a href="mailto:muhabd0336@gmail.com" target="_blank"
+            class="align-items-center d-flex text-white-50 text-decoration-none my-3">
+            <i class="fas fa-envelope"></i>
+            <span class="mx-2 text-white-50">muhabd0336@gmail.com</span>
+          </a>
+          <a href="#" class="align-items-center d-flex text-white-50 text-decoration-none my-3">
+            <i class="fas fa-phone"></i>
+            <span class="mx-2 text-white-50">0331-3973207</span>
+          </a>
+          <a href="#" class="d-flex text-white-50 text-decoration-none my-3">
+            <i class="fas my-3 fa-map-marker-alt"></i>
+            <span class="mx-2 text-white-50">D - 4 Block H North Nazimabad Town, Karachi, Karachi City,
+              Sindh 74700, Pakistan</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="footer__bottom d-flex justify-content-center">
+      <p class="text-white-50">copy rights 2021 | All rights reserved</p>
+    </div>
+  </footer>
+</body>
+
+</html>

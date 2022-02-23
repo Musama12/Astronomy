@@ -1,0 +1,105 @@
+.px-em-5{
+    padding-left: 5em;
+    padding-right: 5em;
+}
+
+.sec{
+    max-width: 100vw;
+    min-height: 100vh;
+    position: relative;
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: .7;
+        font-size: 16px;
+    }
+    *{
+        z-index: 100;
+     }
+}
+.more{
+width: 90px;
+    cursor: pointer;
+    transition: color .2s ease-out ;
+    &:hover{
+    color: var(--opra) !important;
+    }
+}
+.number{
+    position: absolute;
+    top: 0; 
+    right: 20px;
+    opacity: .3;
+    font-size: 500% !important;
+}
+.hero{
+    position: relative;
+    background-image: url('/images/discoveryHeroBg.jpg');
+    background-size: cover;
+    background-position: center;
+     
+    
+    h1{
+    //    width: 100%;
+       font-size: 500%;
+    //    height: 100%;
+    }
+
+   
+}
+.sec2{
+
+    background-image: url('/images/gravitational\ waves.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+.sec3{
+
+    background-image: url('/images/cosmic\ radio.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.sec4{
+
+    background-image: url('/images/universe\ expanding.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.sec5{
+
+    background-image: url('/images/Black\ holes.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+.sec6{
+
+    background-image: url('/images//wter\ on\ mars.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+// media querries 
+@media screen and (min-width: 1440px) {
+    .wrapper {
+      margin: auto;
+      width: 1440px !important;
+    }
+  }
+
+  @media screen and (max-width:500px) {
+    .hero h1{
+        font-size: 300% !important;
+    } 
+  }
+@media screen and (max-width: 450px) {
+    .px-em-5 {
+      padding-right: 2em !important;
+      padding-left: 2em !important;
+    }
+   
+  }

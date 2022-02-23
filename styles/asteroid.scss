@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow-x:hidden !important;
+}
+.sec{
+    min-height: 100vh !important;
+    // overflow: hidden;
+}
+.px-em-5{
+    padding-left: 5em;
+    padding-right: 5em;
+  }
+
+.rotate-astro{
+
+    transform-origin: center;
+    position: relative;
+    z-index: 10000000000;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    display: flex;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    img{
+        max-width: 100% !important;
+    }
+    // height: 100% !important;
+}
+
+
+
+.hero{
+  
+    background: url("/images/asteroid2.jpg");
+    background-size: cover;
+    background-position: 62% 0%;
+    // z-index: -1000;
+    position: relative;
+
+    &::after{
+        pointer-events: none;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-blend-mode: color;
+        opacity: .3;
+        background-color: #000000;
+        // filter: color;
+    }
+    div{
+        z-index: 1000;
+        max-width: 50em !important;
+        a{
+            position: relative;
+            z-index: 100000000;
+        }
+    }
+}
+.sec2{
+    background: url("/images/asteroid3.jpg");
+    background-size: cover;
+    // z-index: -1000;
+    position: relative;
+    div{
+        z-index: 1000;
+        // max-width: 40em !important;
+    }
+    &::after{
+        pointer-events: none;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        // mix-blend-mode: color;
+        opacity: .6;
+        background-color: #000000;
+        // filter: color;
+    }
+}
+.sec3, .sec4,.sec5{
+    background: url('/images/bigBangStarsBg.jpg');
+
+    background-size: cover; 
+    position: relative;
+    
+    div{
+        z-index: 1000;
+        // max-width: 40em !important;
+        
+    }
+    &::after{
+        pointer-events: none;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        mix-blend-mode: overlay;
+        // opacity: .6;
+        background-color: #000000;
+        // filter: color;
+    }
+}
+
+.sec4{
+    background-position: 0% 100%;
+}
+// media querries
+@media screen and (min-width: 1440px) {
+    .wrapper {
+      margin: auto;
+      width: 1440px !important;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+    }
+  }
+  @media screen and (max-width: 768px){
+    .px-em-5{
+        padding-left: 2em !important;
+        padding-right: 2em !important;
+      }
+  }

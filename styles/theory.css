@@ -1,0 +1,211 @@
+.px-em-5 {
+  padding-left: 5em;
+  padding-right: 5em;
+}
+
+.sec {
+  min-height: 100vh;
+  position: relative;
+  z-index: -1;
+  background-position: center;
+  background-size: cover;
+}
+
+.sec * {
+  z-index: 1000;
+}
+
+.sec::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  mix-blend-mode: overlay;
+  background-color: black;
+}
+
+.constant-sec {
+  background-image: url("/images/bigBangStarsBg.jpg");
+  background-size: cover;
+}
+
+.constant-sec section {
+  max-width: 700px;
+}
+
+.heroBB {
+  background-image: url("/images/bigBang.jpg");
+}
+
+.heroBB::after {
+  mix-blend-mode: darken;
+  opacity: .7;
+}
+
+.heroBB section {
+  max-width: 500px;
+}
+
+.heroEV {
+  background-image: url("/images/earthTheory.jpg");
+}
+
+.heroEV::after {
+  mix-blend-mode: overlay;
+  opacity: 1;
+}
+
+.heroEV section {
+  max-width: 500px;
+}
+
+.more-theories__cardBB {
+  width: 200px;
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  background-image: url("/images/earthTheory.jpg");
+  border-radius: 20px;
+  -webkit-box-shadow: 4px 4px 20px 0px rgba(255, 255, 255, 0.15);
+          box-shadow: 4px 4px 20px 0px rgba(255, 255, 255, 0.15);
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+  position: relative;
+  z-index: 1;
+}
+
+.more-theories__cardBB::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: black;
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+  border-radius: inherit;
+  mix-blend-mode: overlay;
+}
+
+.more-theories__title {
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+}
+
+.more-theories__cardBB:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.more-theories__cardBB:hover::after {
+  opacity: .6;
+}
+
+.more-theories__cardBB:hover .more-theories__title {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.more-theories__cardEV {
+  width: 200px;
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  background-image: url("/images/bigBang.jpg");
+  border-radius: 20px;
+  -webkit-box-shadow: 4px 4px 20px 0px rgba(255, 255, 255, 0.15);
+          box-shadow: 4px 4px 20px 0px rgba(255, 255, 255, 0.15);
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+  position: relative;
+  z-index: 1;
+}
+
+.more-theories__cardEV::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: black;
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+  border-radius: inherit;
+  mix-blend-mode: overlay;
+}
+
+.more-theories__title {
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+}
+
+.more-theories__cardEV:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.more-theories__cardEV:hover::after {
+  opacity: .6;
+}
+
+.more-theories__cardEV:hover .more-theories__title {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.accordion {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 70px !important;
+}
+
+.accordion-body a {
+  -webkit-transition: color .2s linear;
+  transition: color .2s linear;
+  cursor: pointer;
+}
+
+.accordion-body a:hover {
+  color: white !important;
+}
+
+@media screen and (min-width: 1440px) {
+  .wrapper {
+    margin: auto;
+    width: 1440px !important;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .px-em-5 {
+    padding-left: 2em !important;
+    padding-right: 2em !important;
+  }
+  .more-theories__title {
+    -webkit-transform: translateX(0%) !important;
+            transform: translateX(0%) !important;
+  }
+  .more-theories__cardEV::after {
+    opacity: .6 !important;
+  }
+  .more-theories__cardBB::after {
+    opacity: .6 !important;
+  }
+}
+/*# sourceMappingURL=theory.css.map */

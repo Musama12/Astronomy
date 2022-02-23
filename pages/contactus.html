@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>contact us</title>
+  <script src="https://kit.fontawesome.com/f51f4172b1.js"></script>
+  <link rel="stylesheet" href="/styles/contactus.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/colors.css">
+  <link rel="stylesheet" href="/styles/nabar.css">
+  <link rel="stylesheet" href="/styles/loading.css">
+
+  <!-- js  -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script defer src="/js/loading.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <style>
+    .contact-wrap {
+      margin: 3em 0em;
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="loader-container">
+    <div class="loader">
+      <span style="--i:1;"></span>
+      <span style="--i:2;"></span>
+      <span style="--i:3;"></span>
+      <span style="--i:4;"></span>
+      <span style="--i:5;"></span>
+      <span style="--i:6;"></span>
+      <span style="--i:7;"></span>
+      <span style="--i:8;"></span>
+      <span style="--i:9;"></span>
+      <span style="--i:10;"></span>
+      <span style="--i:11;"></span>
+      <span style="--i:12;"></span>
+      <span style="--i:13;"></span>
+      <span style="--i:14;"></span>
+      <span style="--i:15;"></span>
+      <span style="--i:16;"></span>
+      <span style="--i:17;"></span>
+      <span style="--i:18;"></span>
+      <span style="--i:19;"></span>
+      <span style="--i:20;"></span>
+
+    </div>
+  </section>
+  <header ng-include="'/static/navbar.html'"></header>
+
+
+  <div class="contact-wrap">
+    <div class="contact-in">
+      <h1>Contact Info</h1>
+      <h2><i class="fa fa-phone"></i> Phone</h2>
+      <p>0330-7053933</p>
+      <p>0331-3973207</p>
+      <p>0321-3815576</p>
+      <p>0333-2462853</p>
+      <h2><i class="fa fa-envelope-o"></i> Email</h2>
+      <p>Syedadua4466@gmail.com</p>
+      <p>muhabd0336@gmail.com</p>
+      <p>ullahkazmisyedasad@gmail.com</p>
+      <p>66usama@gmail.com</p>
+      <h2><i class="fa fa-map-marker"></i> Address</h2>
+      <p>North Nazimabad Aptech Center 2</p>
+    </div>
+    <div class="contact-in">
+      <h1>Send a Message</h1>
+      <form>
+        <input required type="text" placeholder="Full Name" class="contact-in-input" />
+        <input required type="email" placeholder="Email" class="contact-in-input" />
+        <input required type="text" placeholder="Subject" class="contact-in-input" />
+        <textarea required placeholder="Message" class="contact-in-textarea" minlength="10" maxlength="500"></textarea>
+        <input type="submit" value="SUBMIT" class="contact-in-btn" />
+      </form>
+    </div>
+    <div class="contact-in">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.7979752436067!2d67.04494800000003!3d24.938951299999992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33f3daae54d55%3A0x5dae2a3a4b71f12a!2sAptech%20Learning%20North%20Nazimabad%20Center%20ll!5e0!3m2!1sen!2s!4v1618196806294!5m2!1sen!2s"
+        width="100%" height="auto" style="border: 0" loading="lazy"></iframe>
+    </div>
+  </div>
+</body>
+
+</html>

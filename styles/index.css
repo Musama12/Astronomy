@@ -1,0 +1,119 @@
+* {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  z-index: 19000;
+}
+
+svg {
+  overflow: visible !important;
+}
+
+.em-5 {
+  margin: 0em 5em 0em 5em;
+}
+
+.read-more {
+  margin-top: 15px;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.read-more:hover, .read-more:active {
+  background-color: var(--opra) !important;
+  color: white !important;
+}
+
+.hero {
+  max-width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero .mask {
+  opacity: 0.7;
+  z-index: 50;
+  /* background: linear-gradient(90deg,  rgba(0,0,0,1) 10%,rgba(4,97,159,1) 100%); */
+  background: -webkit-gradient(linear, left top, right top, from(#04619f), to(black));
+  background: linear-gradient(90deg, #04619f 0%, black 100%);
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1000;
+  margin-left: 5em;
+}
+
+.hero__content h1 {
+  font-size: 48px;
+}
+
+.hero__cta {
+  -webkit-transition: -webkit-box-shadow 0.4s ease-in-out;
+  transition: -webkit-box-shadow 0.4s ease-in-out;
+  transition: box-shadow 0.4s ease-in-out;
+  transition: box-shadow 0.4s ease-in-out, -webkit-box-shadow 0.4s ease-in-out;
+  -webkit-box-shadow: inset 4px 1px 4px 0px rgba(255, 255, 255, 0.1), 0px 4px 1px 0px rgba(0, 0, 0, 0.4);
+          box-shadow: inset 4px 1px 4px 0px rgba(255, 255, 255, 0.1), 0px 4px 1px 0px rgba(0, 0, 0, 0.4);
+}
+
+.hero__video {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  top: 0;
+  max-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: left;
+     object-position: left;
+}
+
+.astro {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.star-pattern svg,
+.meteor svg {
+  position: absolute;
+  max-height: 100%;
+  opacity: 0.3;
+  z-index: -19000;
+}
+
+.meteor svg:nth-child(1) {
+  right: -50%;
+}
+
+.meteor svg:nth-child(2) {
+  right: -20%;
+}
+
+.sec5 .rotatePlanet {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 0px !important;
+}
+
+@media screen and (min-width: 1440px) {
+  .wrapper {
+    margin: auto;
+    width: 1440px !important;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .em-5 {
+    margin: 0em 2em 0em 2em;
+  }
+}
+/*# sourceMappingURL=index.css.map */

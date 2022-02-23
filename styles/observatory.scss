@@ -1,0 +1,71 @@
+.px-em-5 {
+    padding-left: 5em;
+    padding-right: 5em;
+  }
+  
+  .sec {
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+    background-position: center;
+    background-size: cover;
+
+    & * {
+        position: relative;
+         z-index: 1000;
+    }
+    
+    &::before {
+    pointer-events: none;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1000000;
+      mix-blend-mode: overlay;
+      background-color: black;
+    }
+  }
+  
+  
+  .constant-sec {
+    background-image: url("/images/bigBangStarsBg.jpg");
+    background-size: cover;
+  }
+
+.hero{
+    background-image:url('/images/observatoryHeroBg.jpg') ;
+    &::before{
+        mix-blend-mode: darken !important;
+        opacity: .7 !important;
+    }
+}
+
+// effects 
+.loca-links{
+    a{
+        transition: color .2s ease-out;
+    }
+    a:hover{
+        color: #285094 !important;
+    }
+}
+
+// media querries
+@media screen and (min-width: 1440px) {
+    .wrapper {
+      margin: auto;
+      width: 1440px !important;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+    }
+  }
+@media screen and (max-width: 600px) {
+    .px-em-5 {
+        padding-left: 2em;
+        padding-right: 2em;
+      }
+  }

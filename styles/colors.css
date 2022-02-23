@@ -1,0 +1,30 @@
+:root{
+    --dark-blue:#285094;
+    --light-blue:#04568D;
+    --opra:#12A1A4;
+}
+
+/* text colors */
+.text-opra{
+    color: var(--opra);
+}
+
+/* background colors */
+.bg-dark-blue{
+    background-color: var(--dark-blue);
+}
+.bg-light-blue{
+    background-color: var(--light-blue);
+
+}
+.bg-opra{
+    background-color: var(--opra);
+}
+
+/* gradients colors */
+
+.bgG-light-blue{
+    background: linear-gradient(90deg, rgba(4,97,159,1) 0%, rgba(0,0,0,1) 60%);
+}
+
+

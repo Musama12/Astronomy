@@ -1,0 +1,70 @@
+.rotatePlanet{
+    width: 632px;
+    height: 632px;
+    background-image: url('/images/earthMap.jpeg');
+    background-size: cover;
+    border-radius: 50%;
+    position: absolute;
+    /* bottom: -45% ; */
+    bottom: -200px;
+    box-shadow: -30px -20px 50px rgb(0, 0, 0) inset,
+                0px 0px 50px 3px black inset;
+    animation: rotatePlanet 20s linear alternate infinite;
+    /* right: -35%; */
+    right: -200px;
+    opacity: .3;
+
+}
+.mars{
+    background-image: url('/images/mars.jpg') !important;
+}
+.Saturn{
+    background-image: url('/images/saturn.jpg') !important;
+}
+.Uranus{
+    background-image: url('/images/uranus.jpg') !important;
+}
+.Neptune{
+    background-image: url('/images/neptune.jpg') !important;
+}
+.Mercury{
+    background-image: url('/images/mercury.jpg') !important;
+}
+.Venus
+{
+    background-image: url('/images/venus.jpg') !important;
+}
+.Jupiter
+
+{
+    background-image: url('/images/jupiter.jpg') !important;
+}
+.planet{
+    position: unset;
+    width: 250px;
+    height: 250px;
+    opacity: unset;
+/* transform: scale(0); */
+}
+.small-earth{
+    width: 40px !important;
+    height: 40px !important;
+     box-shadow: -5px -5px 20px rgb(0, 0, 0) inset,
+          0px 0px 20px 3px black inset !important;
+  }
+.rotate{
+    transform-origin: center center;
+    transform: rotate(-45deg);
+}
+@keyframes rotatePlanet {
+    100%{
+        background-position: 100%;
+    }
+}
+@media screen and(min-width:400px) {
+
+  .rotatePlanet  {
+          right: -35% !important;
+              bottom: -45%  !important;
+  }
+}

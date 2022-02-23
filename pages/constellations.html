@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='app'>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>constellations</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" rel="stylesheet" />
+
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>
+
+    <!-- angular js  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <!-- gsap  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+
+    <!-- js  -->
+    <script defer src="/js/constellationAnim.js"></script>
+    <script src="/js/constellationData.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script defer src="/js/loading.js"></script>
+    <!-- css  -->
+    <link rel="stylesheet" href="/styles/colors.css">
+    <link rel="stylesheet" href="/styles/nabar.css">
+    <link rel="stylesheet" href="/styles/loading.css">
+    <link rel="stylesheet" href="/styles/constellations.css" />
+    <link rel="stylesheet" href="/styles/footer.css" />
+</head>
+
+<body ng-controller='constellationData'>
+
+    <!-- loading animation -->
+    <section class="loader-container">
+        <div class="loader">
+            <span style="--i:1;"></span>
+            <span style="--i:2;"></span>
+            <span style="--i:3;"></span>
+            <span style="--i:4;"></span>
+            <span style="--i:5;"></span>
+            <span style="--i:6;"></span>
+            <span style="--i:7;"></span>
+            <span style="--i:8;"></span>
+            <span style="--i:9;"></span>
+            <span style="--i:10;"></span>
+            <span style="--i:11;"></span>
+            <span style="--i:12;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:14;"></span>
+            <span style="--i:15;"></span>
+            <span style="--i:16;"></span>
+            <span style="--i:17;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:19;"></span>
+            <span style="--i:20;"></span>
+
+        </div>
+    </section>
+
+    <!-- nav bar  -->
+    <header ng-include="'/static/navbar.html'"></header>
+    <!-- hero  -->
+    <section class="hero sec d-flex justify-content-center  align-items-center px-em-5">
+
+        <section class=" wrapper hero__sec  overflow-hidden">
+            <h1 class="text-opra text-capitalize">{{Data.hero.heading}}</h1>
+            <p class="text-white-50">{{Data.hero.desc}}</p>
+        </section>
+    </section>
+    <!-- section 2 -->
+    <section class="sec2 sec d-flex justify-content-center  align-items-center px-em-5">
+        <section class=" wrapper  overflow-hidden">
+            <h1 class="text-opra text-capitalize">{{Data.sec2.heading}}</h1>
+            <p class="text-white-50">{{Data.sec2.desc}}</p>
+        </section>
+    </section>
+    <!-- section 3 -->
+    <section
+        class="sec3 sec d-flex justify-content-center align-items-center flex-column align-items-md-center flex-md-row  justify-content-center px-em-5">
+        <section class=" wrapper  overflow-hidden">
+            <h1 class="text-opra text-capitalize">{{Data.sec3.heading}}</h1>
+            <p class="text-white-50">{{Data.sec3.desc}}</p>
+        </section>
+        <aside class="d-flex h-100 flex-column flex-md-row mx-md-5 wrapper ">
+            <div class="d-flex h-100  flex-md-column flex-wrap my-2">
+
+                <div class="constImgBx">
+                    <a href="#aquarius"><img src="/images/aquarius.png" alt=""></a>
+                </div>
+                <div class="constImgBx">
+                    <a href="#pisces"><img src="/images/pisces.png" alt=""></a>
+                </div>
+                <div class="constImgBx">
+                    <a href="#aries"><img src="/images/aries.png" alt=""></a>
+                </div>
+                <div class="constImgBx">
+                    <a href="#taurus"><img src="/images/taurus.png" alt=""></a>
+                </div>
+                <div class="constImgBx">
+                    <a href="#gemini"><img src="/images/gemini.png" alt=""></a>
+                </div>
+                <div class="constImgBx">
+                    <a href="#leo"><img src="/images/leo.png" alt=""></a>
+                </div>
+            </div>
+            <div class="d-flex h-100 flex-wrap   flex-md-column my-2">
+
+                <div class="constImgBx">
+                    <a href="#cancer"><img src="/images/cancer.png" alt=""></a>
+                </div>
+                <div class="constImgBx">
+                    <a href="#scorpio"><img src="/images/scorpio.png" alt=""></a>
+                </div>
+                <div class="constImgBx">
+                    <a href="#virgo"><img src="/images/virgo.png" alt=""></a>
+                </div>
+                <div class="constImgBx">
+                    <a href="#libra"><img src="/images/libra.png" alt=""></a>
+                </div>
+                <div class="constImgBx">
+                    <a href="#capricorn"><img src="/images/capricorn.png" alt=""></a>
+                </div>
+                <div class="constImgBx">
+                    <a href="#sagittarius"><img src="/images/sagittarius.png" alt=""></a>
+                </div>
+            </div>
+        </aside>
+    </section>
+    <!-- section 4 -->
+    <section id="aquarius" class="sec4 m-0 sec d-flex align-items-center  px-em-5">
+        <section class="row wrapper">
+
+
+            <section class=" py-5 order-1 order-md-0 col-12 col-md-12  overflow-hidden">
+                <h1 class="text-opra text-capitalize">{{Data.sec4.heading}}</h1>
+                <div class="d-flex sec4__stats flex-column my-4">
+                    <p class="text-white text-capitalize">symbol: <span
+                            class="text-white-50">{{Data.sec4.symbol}}</span></p>
+                    <p class="text-white text-capitalize">element: <span
+                            class="text-white-50">{{Data.sec4.element}}</span></p>
+                    <p class="text-white text-capitalize">quality: <span
+                            class="text-white-50">{{Data.sec4.quality}}</span></p>
+                    <p class="text-white text-capitalize">color: <span class="text-white-50">{{Data.sec4.color}}</span>
+                    </p>
+                    <p class="text-white text-capitalize">day: <span class="text-white-50">{{Data.sec4.day}}</span></p>
+                    <p class="text-white text-capitalize">rulling Planet: <span
+                            class="text-white-50">{{Data.sec4.rullingPlanet}}</span></p>
+                </div>
+                <p class="sec4__desc text-white-50">{{Data.sec4.desc}}</p>
+            </section>
+        </section>
+    </section>
+    <!-- section 5  -->
+    <section id="aries" class="sec5 m-0 sec d-flex align-items-center  px-em-5">
+        <section class="row wrapper">
+
+
+            <section class=" py-5 order-1 order-md-0 col-12 col-md-12  overflow-hidden">
+                <h1 class="text-opra text-capitalize">{{Data.sec5.heading}}</h1>
+                <div class="d-flex sec5__stats flex-column my-4">
+                    <p class="text-white text-capitalize">symbol: <span
+                            class="text-white-50">{{Data.sec5.symbol}}</span></p>
+                    <p class="text-white text-capitalize">element: <span
+                            class="text-white-50">{{Data.sec5.element}}</span></p>
+                    <p class="text-white text-capitalize">quality: <span
+                            class="text-white-50">{{Data.sec5.quality}}</span></p>
+                    <p class="text-white text-capitalize">color: <span class="text-white-50">{{Data.sec5.color}}</span>
+                    </p>
+                    <p class="text-white text-capitalize">day: <span class="text-white-50">{{Data.sec5.day}}</span></p>
+                    <p class="text-white text-capitalize">rulling Planet: <span
+                            class="text-white-50">{{Data.sec5.rullingPlanet}}</span></p>
+                </div>
+                <p class="sec5__desc text-white-50">{{Data.sec5.desc}}</p>
+            </section>
+        </section>
+    </section>
+    <!-- section 6  -->
+    <section id="pisces" class="sec6 m-0 sec d-flex align-items-center  px-em-5">
+        <section class="row wrapper">
+
+
+            <section class=" py-5 order-1 order-md-0 col-12 col-md-12  overflow-hidden">
+                <h1 class="text-opra text-capitalize">{{Data.sec6.heading}}</h1>
+                <div class="d-flex sec6__stats flex-column my-4">
+                    <p class="text-white text-capitalize">symbol: <span
+                            class="text-white-50">{{Data.sec6.symbol}}</span></p>
+                    <p class="text-white text-capitalize">element: <span
+                            class="text-white-50">{{Data.sec6.element}}</span></p>
+                    <p class="text-white text-capitalize">quality: <span
+                            class="text-white-50">{{Data.sec6.quality}}</span></p>
+                    <p class="text-white text-capitalize">color: <span class="text-white-50">{{Data.sec6.color}}</span>
+                    </p>
+                    <p class="text-white text-capitalize">day: <span class="text-white-50">{{Data.sec6.day}}</span></p>
+                    <p class="text-white text-capitalize">rulling Planet: <span
+                            class="text-white-50">{{Data.sec6.rullingPlanet}}</span></p>
+                </div>
+                <p class="sec6__desc text-white-50">{{Data.sec6.desc}}</p>
+            </section>
+        </section>
+    </section>
+    <!-- section 7  -->
+    <section id="taurus" class="sec7 m-0 sec d-flex align-items-center  px-em-5">
+        <section class="row wrapper">
+            <section class=" py-5 order-1 order-md-0 col-12 col-md-12  overflow-hidden">
+                <h1 class="text-opra text-capitalize">{{Data.sec7.heading}}</h1>
+                <div class="d-flex sec7__stats flex-column my-4">
+                    <p class="text-white text-capitalize">symbol: <span
+                            class="text-white-50">{{Data.sec7.symbol}}</span></p>
+                    <p class="text-white text-capitalize">element: <span
+                            class="text-white-50">{{Data.sec7.element}}</span></p>
+                    <p class="text-white text-capitalize">quality: <span
+                            class="text-white-50">{{Data.sec7.quality}}</span></p>
+                    <p class="text-white text-capitalize">color: <span class="text-white-50">{{Data.sec7.color}}</span>
+                    </p>
+                    <p class="text-white text-capitalize">day: <span class="text-white-50">{{Data.sec7.day}}</span></p>
+                    <p class="text-white text-capitalize">rulling Planet: <span
+                            class="text-white-50">{{Data.sec7.rullingPlanet}}</span></p>
+                </div>
+                <p class="sec7__desc text-white-50">{{Data.sec7.desc}}</p>
+            </section>
+        </section>
+    </section>
+    <!-- section 8  -->
+    <section id="gemini" class="sec8 m-0 sec d-flex align-items-center  px-em-5">
+        <section class="row wrapper">
+            <section class=" py-5 order-1 order-md-0 col-12 col-md-12  overflow-hidden">
+                <h1 class="text-opra text-capitalize">{{Data.sec8.heading}}</h1>
+                <div class="d-flex sec8__stats flex-column my-4">
+                    <p class="text-white text-capitalize">symbol: <span
+                            class="text-white-50">{{Data.sec8.symbol}}</span></p>
+                    <p class="text-white text-capitalize">element: <span
+                            class="text-white-50">{{Data.sec8.element}}</span></p>
+                    <p class="text-white text-capitalize">quality: <span
+                            class="text-white-50">{{Data.sec8.quality}}</span></p>
+                    <p class="text-white text-capitalize">color: <span class="text-white-50">{{Data.sec8.color}}</span>
+                    </p>
+                    <p class="text-white text-capitalize">day: <span class="text-white-50">{{Data.sec8.day}}</span></p>
+                    <p class="text-white text-capitalize">rulling Planet: <span
+                            class="text-white-50">{{Data.sec8.rullingPlanet}}</span></p>
+                </div>
+                <p class="sec8__desc text-white-50">{{Data.sec8.desc}}</p>
+            </section>
+        </section>
+    </section>
+    <!-- section 9  -->
+    <section id="cancer" class="sec9 m-0 sec d-flex align-items-center  px-em-5">
+        <section class="row wrapper">
+            <section class=" py-5 order-1 order-md-0 col-12 col-md-12  overflow-hidden">
+                <h1 class="text-opra text-capitalize">{{Data.sec9.heading}}</h1>
+                <div class="d-flex sec9__stats flex-column my-4">
+                    <p class="text-white text-capitalize">symbol: <span
+                            class="text-white-50">{{Data.sec9.symbol}}</span></p>
+                    <p class="text-white text-capitalize">element: <span
+                            class="text-white-50">{{Data.sec9.element}}</span></p>
+                    <p class="text-white text-capitalize">quality: <span
+                            class="text-white-50">{{Data.sec9.quality}}</span></p>
+                    <p class="text-white text-capitalize">color: <span class="text-white-50">{{Data.sec9.color}}</span>
+                    </p>
+                    <p class="text-white text-capitalize">day: <span class="text-white-50">{{Data.sec9.day}}</span></p>
+                    <p class="text-white text-capitalize">rulling Planet: <span
+                            class="text-white-50">{{Data.sec9.rullingPlanet}}</span></p>
+                </div>
+                <p class="sec9__desc text-white-50">{{Data.sec9.desc}}</p>
+            </section>
+        </section>
+    </section>
+    <!-- section 10  -->
+    <section id="leo" class="sec10 m-0 sec d-flex align-items-center  px-em-5">
+        <section class="row wrapper">
+            <section class=" py-5 order-1 order-md-0 col-12 col-md-12  overflow-hidden">
+                <h1 class="text-opra text-capitalize">{{Data.sec10.heading}}</h1>
+                <div class="d-flex sec10__stats flex-column my-4">
+                    <p class="text-white text-capitalize">symbol: <span
+                            class="text-white-50">{{Data.sec10.symbol}}</span></p>
+                    <p class="text-white text-capitalize">element: <span
+                            class="text-white-50">{{Data.sec10.element}}</span></p>
+                    <p class="text-white text-capitalize">quality: <span
+                            class="text-white-50">{{Data.sec10.quality}}</span></p>
+                    <p class="text-white text-capitalize">color: <span class="text-white-50">{{Data.sec10.color}}</span>
+                    </p>
+                    <p class="text-white text-capitalize">day: <span class="text-white-50">{{Data.sec10.day}}</span></p>
+                    <p class="text-white text-capitalize">rulling Planet: <span
+                            class="text-white-50">{{Data.sec10.rullingPlanet}}</span></p>
+                </div>
+                <p class="sec10__desc text-white-50">{{Data.sec10.desc}}</p>
+            </section>
+        </section>
+    </section>
+
+    <!-- section 11  -->
+    <section id="virgo" class="sec11 m-0 sec d-flex align-items-center  px-em-5">
+        <section class="row wrapper">
+            <section class=" py-5 order-1 order-md-0 col-12 col-md-12  overflow-hidden">
+                <h1 class="text-opra text-capitalize">{{Data.sec11.heading}}</h1>
+                <div class="d-flex sec11__stats flex-column my-4">
+                    <p class="text-white text-capitalize">symbol: <span
+                            class="text-white-50">{{Data.sec11.symbol}}</span></p>
+                    <p class="text-white text-capitalize">element: <span
+                            class="text-white-50">{{Data.sec11.element}}</span></p>
+                    <p class="text-white text-capitalize">quality: <span
+                            class="text-white-50">{{Data.sec11.quality}}</span></p>
+                    <p class="text-white text-capitalize">color: <span class="text-white-50">{{Data.sec11.color}}</span>
+                    </p>
+                    <p class="text-white text-capitalize">day: <span class="text-white-50">{{Data.sec11.day}}</span></p>
+                    <p class="text-white text-capitalize">rulling Planet: <span
+                            class="text-white-50">{{Data.sec11.rullingPlanet}}</span></p>
+                </div>
+                <p class="sec11__desc text-white-50">{{Data.sec11.desc}}</p>
+            </section>
+        </section>
+    </section>
+
+    <!-- section 12  -->
+    <section id="scorpio" class="sec12 m-0 sec d-flex align-items-center  px-em-5">
+        <section class="row wrapper">
+            <section class=" py-5 order-1 order-md-0 col-12 col-md-12  overflow-hidden">
+                <h1 class="text-opra text-capitalize">{{Data.sec12.heading}}</h1>
+                <div class="d-flex sec12__stats flex-column my-4">
+                    <p class="text-white text-capitalize">symbol: <span
+                            class="text-white-50">{{Data.sec12.symbol}}</span></p>
+                    <p class="text-white text-capitalize">element: <span
+                            class="text-white-50">{{Data.sec12.element}}</span></p>
+                    <p class="text-white text-capitalize">quality: <span
+                            class="text-white-50">{{Data.sec12.quality}}</span></p>
+                    <p class="text-white text-capitalize">color: <span class="text-white-50">{{Data.sec12.color}}</span>
+                    </p>
+                    <p class="text-white text-capitalize">day: <span class="text-white-50">{{Data.sec12.day}}</span></p>
+                    <p class="text-white text-capitalize">rulling Planet: <span
+                            class="text-white-50">{{Data.sec12.rullingPlanet}}</span></p>
+                </div>
+                <p class="sec12__desc text-white-50">{{Data.sec12.desc}}</p>
+            </section>
+        </section>
+    </section>
+    <!-- section 13 -->
+    <section id="sagittarius" class="sec13 m-0 sec d-flex align-items-center  px-em-5">
+        <section class="row wrapper">
+            <section class=" py-5 order-1 order-md-0 col-12 col-md-12  overflow-hidden">
+                <h1 class="text-opra text-capitalize">{{Data.sec13.heading}}</h1>
+                <div class="d-flex sec13__stats flex-column my-4">
+                    <p class="text-white text-capitalize">symbol: <span
+                            class="text-white-50">{{Data.sec13.symbol}}</span></p>
+                    <p class="text-white text-capitalize">element: <span
+                            class="text-white-50">{{Data.sec13.element}}</span></p>
+                    <p class="text-white text-capitalize">quality: <span
+                            class="text-white-50">{{Data.sec13.quality}}</span></p>
+                    <p class="text-white text-capitalize">color: <span class="text-white-50">{{Data.sec13.color}}</span>
+                    </p>
+                    <p class="text-white text-capitalize">day: <span class="text-white-50">{{Data.sec13.day}}</span></p>
+                    <p class="text-white text-capitalize">rulling Planet: <span
+                            class="text-white-50">{{Data.sec13.rullingPlanet}}</span></p>
+                </div>
+                <p class="sec13__desc text-white-50">{{Data.sec13.desc}}</p>
+            </section>
+        </section>
+    </section>
+
+    <!-- section 14  -->
+    <section id="capricorn" class="sec14 m-0 sec d-flex align-items-center  px-em-5">
+        <section class="row wrapper">
+            <section class=" py-5 order-1 order-md-0 col-12 col-md-12  overflow-hidden">
+                <h1 class="text-opra text-capitalize">{{Data.sec14.heading}}</h1>
+                <div class="d-flex sec14__stats flex-column my-4">
+                    <p class="text-white text-capitalize">symbol: <span
+                            class="text-white-50">{{Data.sec14.symbol}}</span></p>
+                    <p class="text-white text-capitalize">element: <span
+                            class="text-white-50">{{Data.sec14.element}}</span></p>
+                    <p class="text-white text-capitalize">quality: <span
+                            class="text-white-50">{{Data.sec14.quality}}</span></p>
+                    <p class="text-white text-capitalize">color: <span class="text-white-50">{{Data.sec14.color}}</span>
+                    </p>
+                    <p class="text-white text-capitalize">day: <span class="text-white-50">{{Data.sec14.day}}</span></p>
+                    <p class="text-white text-capitalize">rulling Planet: <span
+                            class="text-white-50">{{Data.sec14.rullingPlanet}}</span></p>
+                </div>
+                <p class="sec14__desc text-white-50">{{Data.sec14.desc}}</p>
+            </section>
+        </section>
+    </section>
+    <!-- section 15  -->
+    <section id="libra" class="sec15 m-0 sec d-flex align-items-center  px-em-5">
+        <section class="row wrapper">
+            <section class=" py-5 order-1 order-md-0 col-12 col-md-12  overflow-hidden">
+                <h1 class="text-opra text-capitalize">{{Data.sec15.heading}}</h1>
+                <div class="d-flex sec14__stats flex-column my-4">
+                    <p class="text-white text-capitalize">symbol: <span
+                            class="text-white-50">{{Data.sec15.symbol}}</span></p>
+                    <p class="text-white text-capitalize">element: <span
+                            class="text-white-50">{{Data.sec15.element}}</span></p>
+                    <p class="text-white text-capitalize">quality: <span
+                            class="text-white-50">{{Data.sec15.quality}}</span></p>
+                    <p class="text-white text-capitalize">color: <span class="text-white-50">{{Data.sec15.color}}</span>
+                    </p>
+                    <p class="text-white text-capitalize">day: <span class="text-white-50">{{Data.sec15.day}}</span></p>
+                    <p class="text-white text-capitalize">rulling Planet: <span
+                            class="text-white-50">{{Data.sec15.rullingPlanet}}</span></p>
+                </div>
+                <p class="sec14__desc text-white-50">{{Data.sec15.desc}}</p>
+            </section>
+        </section>
+    </section>
+    <!-- footer  -->
+    <footer class="footer  d-flex justify-content-center flex-column">
+        <div class="footer__container mx-5 mt-5 mb-3 d-flex flex-column flex-md-row justify-content-md-between">
+
+            <div class="footer__useFulLinks mx-4 d-flex flex-column ">
+                <h5 style="letter-spacing: .2em;" class="text-uppercase text-opra d-block ">useful links</h5>
+                <div class="footer__links d-flex flex-column">
+                    <a href="/pages/index.html"
+                        class="text-capitalize text-white-50   text-decoration-none my-2">home</a>
+                    <a href="/pages/contactus.html"
+                        class="text-capitalize text-white-50  text-decoration-none my-2">contact us</a>
+                    <div class=" text-capitalize text-white-50 my-2 ">
+                        <div style="cursor: pointer;" class="d-flex  hover align-items-center ">
+                            <a href="/pages/discoveries.html" class="text-capitalize text-white-50">discovries</a>
+                        </div>
+                    </div>
+                    <div class=" text-capitalize text-white-50 my-2 ">
+                        <div style="cursor: pointer;" class="d-flex  hover align-items-center ">
+                            <a href="/pages/top-5-observatories.html"
+                                class="text-capitalize text-white-50">observatories</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="footer__socialLinks mx-4 d-flex flex-column">
+                <h5 style="letter-spacing: .2em;" class="text-uppercase text-opra ">follow us</h5>
+                <div class="footer__links d-flex flex-column">
+                    <a href="https://www.facebook.com/" target="_blank"
+                        class="text-capitalize align-items-center d-flex text-white-50  text-decoration-none my-3">
+                        <i class="fab fa-facebook"></i>
+                        <span class="mx-2 text-capitalize text-white-50">facebook</span>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank"
+                        class="text-capitalize align-items-center d-flex text-white-50  text-decoration-none my-3">
+                        <i class="fab fa-twitter"></i>
+                        <span class="mx-2 text-capitalize text-white-50">twitter</span>
+                    </a>
+                    <a href="https://www.linkedin.com/" target="_blank"
+                        class="text-capitalize align-items-center d-flex text-white-50  text-decoration-none my-3">
+                        <i class="fab fa-linkedin"></i>
+                        <span class="mx-2 text-capitalize text-white-50">linkedIn</span>
+                    </a>
+
+                </div>
+            </div>
+            <div class="footer__contactLinks mx-4 d-flex flex-column">
+                <h5 style="letter-spacing: .2em;" class="text-uppercase text-opra ">get in touch</h5>
+                <div class="footer__links d-flex flex-column">
+                    <a href="mailto:muhabd0336@gmail.com" target="_blank"
+                        class="align-items-center d-flex text-white-50  text-decoration-none my-3">
+                        <i class="fas fa-envelope"></i>
+                        <span class="mx-2 text-white-50">muhabd0336@gmail.com</span>
+                    </a>
+                    <a href="#" class="align-items-center d-flex text-white-50  text-decoration-none my-3">
+                        <i class="fas fa-phone"></i>
+                        <span class="mx-2 text-white-50">0331-3973207</span>
+                    </a>
+                    <a href="#" class=" d-flex text-white-50  text-decoration-none my-3">
+                        <i class="fas my-3 fa-map-marker-alt"></i>
+                        <span class="mx-2 text-white-50">D - 4 Block H North Nazimabad Town, Karachi, Karachi City,
+                            Sindh 74700, Pakistan</span>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="footer__bottom d-flex justify-content-center">
+            <p class="text-white-50">copy rights 2021 | All rights reserved</p>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

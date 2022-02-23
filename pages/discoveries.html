@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>discoveries | astronomy</title>
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" rel="stylesheet" />
+
+  <!-- MDB -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"
+    defer></script>
+
+  <!-- gsap -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/TextPlugin.min.js"></script>
+  <!-- css -->
+  <link rel="stylesheet" href="/styles/discoveries.css" />
+  <link rel="stylesheet" href="/styles/colors.css" />
+  <link rel="stylesheet" href="/styles/loading.css" />
+  <!-- js  -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="/js/dicoveriesData.js"></script>
+  <script defer src="/js/discoveriesAnim.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script defer src="/js/loading.js"></script>
+
+  <!-- nav bar: -->
+
+  <link rel="stylesheet" href="/styles/nabar.css" />
+
+  <!-- loading animation: -->
+  <link rel="stylesheet" href="/styles/loading.css" />
+  <script defer src="/js/loading.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- footer: -->
+  <script defer src="/js/footer.js"></script>
+  <link rel="stylesheet" href="/styles/footer.css" />
+  <style>
+    .modal {
+      z-index: 10000000000000000000000000;
+    }
+  </style>
+</head>
+
+<body ng-controller="discData">
+  <!-- loading animation  -->
+
+  <section class="loader-container">
+    <div class="loader">
+      <span style="--i: 1"></span>
+      <span style="--i: 2"></span>
+      <span style="--i: 3"></span>
+      <span style="--i: 4"></span>
+      <span style="--i: 5"></span>
+      <span style="--i: 6"></span>
+      <span style="--i: 7"></span>
+      <span style="--i: 8"></span>
+      <span style="--i: 9"></span>
+      <span style="--i: 10"></span>
+      <span style="--i: 11"></span>
+      <span style="--i: 12"></span>
+      <span style="--i: 13"></span>
+      <span style="--i: 14"></span>
+      <span style="--i: 15"></span>
+      <span style="--i: 16"></span>
+      <span style="--i: 17"></span>
+      <span style="--i: 18"></span>
+      <span style="--i: 19"></span>
+      <span style="--i: 20"></span>
+    </div>
+  </section>
+
+  <!-- nav bar  -->
+  <header ng-include="'/static/navbar.html'"></header>
+
+  <!-- Modal -->
+
+  <!-- section 2 modal  -->
+  <div class="modal top fade" id="sec2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+    data-mdb-backdrop="true" data-mdb-keyboard="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-opra text-capitalize" id="exampleModalLabel">
+            {{Data.sec2.heading}}
+          </h5>
+          <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>{{Data.sec2.desc1}}</p>
+          <p>{{Data.sec2.desc2}}</p>
+          <p>{{Data.sec2.desc3}}</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn bg-dark-blue text-white" data-mdb-dismiss="modal">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- section 3 modal  -->
+  <div class="modal top fade" id="sec3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+    data-mdb-backdrop="true" data-mdb-keyboard="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-opra text-capitalize" id="exampleModalLabel">
+            {{Data.sec3.heading}}
+          </h5>
+          <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>{{Data.sec3.desc1}}</p>
+          <p>{{Data.sec3.desc2}}</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn bg-dark-blue text-white" data-mdb-dismiss="modal">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- section 4  -->
+  <div class="modal top fade" id="sec4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+    data-mdb-backdrop="true" data-mdb-keyboard="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-opra text-capitalize" id="exampleModalLabel">
+            {{Data.sec4.heading}}
+          </h5>
+          <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>{{Data.sec4.desc1}}</p>
+          <p>{{Data.sec4.desc2}}</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn bg-dark-blue text-white" data-mdb-dismiss="modal">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- hero  -->
+  <section class="hero sec d-flex justify-content-center align-items-center">
+    <section class="wrapper d-flex justify-content-center align-items-center">
+      <h1 class="text-opra text-center text-capitalize">
+        {{Data.hero.heading}}
+      </h1>
+    </section>
+  </section>
+
+  <!-- section 2 -->
+  <section class="sec sec2 px-em-5 position-relative d-flex justify-content-center align-items-center">
+    <span class="text-opra position-absolute number fs-1">1</span>
+    <section class="wrapper flex-column d-flex justify-content-center">
+      <h3 class="text-opra text-capitalize">{{Data.sec2.heading}}</h3>
+      <p class="text-white-50 py-3">{{Data.sec2.desc1}}</p>
+      <span data-mdb-toggle="modal" data-mdb-target="#sec2" class="text-white text-capitalize d-inline more">read more
+      </span>
+    </section>
+  </section>
+  <!-- section 3 -->
+  <section class="sec sec3 px-em-5 position-relative d-flex justify-content-center align-items-center">
+    <span class="text-opra position-absolute number fs-1">2</span>
+    <section class="wrapper flex-column d-flex justify-content-center">
+      <h3 class="text-opra text-capitalize">{{Data.sec3.heading}}</h3>
+      <p class="text-white-50 py-3">{{Data.sec3.desc1}}</p>
+      <span data-mdb-toggle="modal" data-mdb-target="#sec3" class="text-white text-capitalize d-inline more">read
+        more</span>
+    </section>
+  </section>
+  <!-- section 4 -->
+  <section class="sec sec4 px-em-5 position-relative d-flex justify-content-center align-items-center">
+    <span class="text-opra position-absolute number fs-1">3</span>
+    <section class="wrapper flex-column d-flex justify-content-center">
+      <h3 class="text-opra text-capitalize">{{Data.sec4.heading}}</h3>
+      <p class="text-white-50 py-3">{{Data.sec4.desc1}}</p>
+      <span data-mdb-toggle="modal" data-mdb-target="#sec4" class="text-white text-capitalize d-inline more">read
+        more</span>
+    </section>
+  </section>
+  <!-- section 5 -->
+  <section class="sec sec5 px-em-5 position-relative d-flex justify-content-center align-items-center">
+    <span class="text-opra position-absolute number fs-1">4</span>
+    <section class="wrapper flex-column d-flex justify-content-center">
+      <h3 class="text-opra text-capitalize">{{Data.sec5.heading}}</h3>
+      <p class="text-white-50 py-3">{{Data.sec5.desc1}}</p>
+    </section>
+  </section>
+  <!-- section 6 -->
+  <section class="sec sec6 px-em-5 position-relative d-flex justify-content-center align-items-center">
+    <span class="text-opra position-absolute number fs-1">5</span>
+    <section class="wrapper flex-column d-flex justify-content-center">
+      <h3 class="text-opra text-capitalize">{{Data.sec6.heading}}</h3>
+      <p class="text-white-50 py-3">{{Data.sec6.desc1}}</p>
+    </section>
+  </section>
+
+  <!-- footer  -->
+  <footer class="footer d-flex justify-content-center flex-column">
+    <div class="footer__container mx-5 mt-5 mb-3 d-flex flex-column flex-md-row justify-content-md-between">
+      <div class="footer__useFulLinks mx-4 d-flex flex-column">
+        <h5 style="letter-spacing: 0.2em" class="text-uppercase text-opra d-block">
+          useful links
+        </h5>
+        <div class="footer__links d-flex flex-column">
+          <a href="/pages/index.html" class="text-capitalize text-white-50 text-decoration-none my-2">home</a>
+          <a href="/pages/contactus.html" class="text-capitalize text-white-50 text-decoration-none my-2">contact us</a>
+          <div class="text-capitalize text-white-50 my-2">
+            <div style="cursor: pointer" class="d-flex hover align-items-center">
+              <a href="/pages/discoveries.html" class="text-capitalize text-white-50">discovries</a>
+            </div>
+          </div>
+          <div class="text-capitalize text-white-50 my-2">
+            <div style="cursor: pointer" class="d-flex hover align-items-center">
+              <a href="/pages/top-5-observatories.html" class="text-capitalize text-white-50">observatories</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__socialLinks mx-4 d-flex flex-column">
+        <h5 style="letter-spacing: 0.2em" class="text-uppercase text-opra">
+          follow us
+        </h5>
+        <div class="footer__links d-flex flex-column">
+          <a href="https://www.facebook.com/" target="_blank"
+            class="text-capitalize align-items-center d-flex text-white-50 text-decoration-none my-3">
+            <i class="fab fa-facebook"></i>
+            <span class="mx-2 text-capitalize text-white-50">facebook</span>
+          </a>
+          <a href="https://twitter.com/" target="_blank"
+            class="text-capitalize align-items-center d-flex text-white-50 text-decoration-none my-3">
+            <i class="fab fa-twitter"></i>
+            <span class="mx-2 text-capitalize text-white-50">twitter</span>
+          </a>
+          <a href="https://www.linkedin.com/" target="_blank"
+            class="text-capitalize align-items-center d-flex text-white-50 text-decoration-none my-3">
+            <i class="fab fa-linkedin"></i>
+            <span class="mx-2 text-capitalize text-white-50">linkedIn</span>
+          </a>
+        </div>
+      </div>
+      <div class="footer__contactLinks mx-4 d-flex flex-column">
+        <h5 style="letter-spacing: 0.2em" class="text-uppercase text-opra">
+          get in touch
+        </h5>
+        <div class="footer__links d-flex flex-column">
+          <a href="mailto:muhabd0336@gmail.com" target="_blank"
+            class="align-items-center d-flex text-white-50 text-decoration-none my-3">
+            <i class="fas fa-envelope"></i>
+            <span class="mx-2 text-white-50">muhabd0336@gmail.com</span>
+          </a>
+          <a href="#" class="align-items-center d-flex text-white-50 text-decoration-none my-3">
+            <i class="fas fa-phone"></i>
+            <span class="mx-2 text-white-50">0331-3973207</span>
+          </a>
+          <a href="#" class="d-flex text-white-50 text-decoration-none my-3">
+            <i class="fas my-3 fa-map-marker-alt"></i>
+            <span class="mx-2 text-white-50">D - 4 Block H North Nazimabad Town, Karachi, Karachi City,
+              Sindh 74700, Pakistan</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="footer__bottom d-flex justify-content-center">
+      <p class="text-white-50">copy rights 2021 | All rights reserved</p>
+    </div>
+  </footer>
+</body>
+
+</html>

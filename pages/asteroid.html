@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='app'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asteroids</title>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" rel="stylesheet" />
+
+
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"
+        defer></script>
+
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+    <!-- styles  -->
+    <link rel="stylesheet" href="/styles/colors.css" />
+    <link rel="stylesheet" href="/styles/asteroid.css">
+
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="/js/asteroidData.js"></script>
+    <script defer src="/js/asteroidAnimation.js"></script>
+
+    <!-- nav bar: -->
+    <link rel="stylesheet" href="/styles/nabar.css">
+    <!-- loading animation: -->
+    <link rel="stylesheet" href="/styles/loading.css">
+    <script defer src="/js/loading.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- footer: -->
+    <script defer src="/js/footer.js"></script>
+    <link rel="stylesheet" href="/styles/footer.css">
+
+</head>
+
+<body ng-controller="asteroidData">
+    <!-- loading animation  -->
+
+    <section class="loader-container">
+        <div class="loader">
+            <span style="--i:1;"></span>
+            <span style="--i:2;"></span>
+            <span style="--i:3;"></span>
+            <span style="--i:4;"></span>
+            <span style="--i:5;"></span>
+            <span style="--i:6;"></span>
+            <span style="--i:7;"></span>
+            <span style="--i:8;"></span>
+            <span style="--i:9;"></span>
+            <span style="--i:10;"></span>
+            <span style="--i:11;"></span>
+            <span style="--i:12;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:14;"></span>
+            <span style="--i:15;"></span>
+            <span style="--i:16;"></span>
+            <span style="--i:17;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:19;"></span>
+            <span style="--i:20;"></span>
+
+        </div>
+    </section>
+    <!-- nav bar  -->
+    <header ng-include="'/static/navbar.html'"></header>
+    <!-- hero section start  -->
+    <section class="hero sec bgG-light-blue d-flex justify-content-center flex-column align-items-center">
+        <div class="d-flex justify-content-center flex-column px-em-5 align-items-center">
+
+            <h1 class="text-capitalize text-opra text-center my-3">{{hero.heading}}</h1>
+            <p class="text-white-50">{{hero.desc1}}<span class="text-opra fw-bold">{{hero.descInlineVal}}</span></p>
+            <p class="text-white-50">{{hero.desc2}} </p>
+
+            <a type="button" href="#sec2" class="btn bg-opra text-white-50 my-3 btn-rounded">contnue reading</a>
+        </div>
+
+    </section>
+    <!-- hero section end -->
+
+    <!-- section 2 start -->
+    <section id="sec2" class="sec px-em-5 secContent2 sec2 d-flex align-items-center bgG-light-blue ">
+        <div class=" d-flex wrapper  sec2__content justify-content-center   flex-column">
+
+            <h1 class="text-capitalize my-3 text-opra my-3">{{sec2.heading}}</h1>
+            <p class="text-white-50">{{sec2.desc1}}</p>
+            <p class="text-white-50 my-3">{{sec2.desc2}} </p>
+        </div>
+
+    </section>
+    <!-- section 2 end -->
+
+    <section class="d-flex main-sec flex-column justify-content-center align-items-center">
+
+        <!-- section 3 start -->
+        <section id="sec3" class="sec sec3 secContent3 d-flex align-items-center bgG-light-blue ">
+            <div class="row px-em-5 w-100">
+
+                <div class="col-md-6 col-12 order-md-1   sec3__content  order-1 ">
+
+                    <h1 class="text-capitalize my-3 text-white my-3">{{sec3.heading}}</h1>
+                    <p class="text-white-50">{{sec3.desc1}}</p>
+                </div>
+                <div class="rotate-astro col-12 order-md-2 order-0 order-md-1   order-0   astro-sec3 col-md-6">
+                    <img src="/images/c-type_asteroid.png" alt="">
+                </div>
+            </div>
+
+        </section>
+        <!-- section 3 end -->
+        <!-- section 4 start -->
+        <section id="sec4" class="sec sec4 secContent4 d-flex align-items-center  bgG-light-blue ">
+
+            <div class="row px-em-5 w-100">
+
+                <div class="col-md-6 col-12 order-md-1   sec4__content order-1  ">
+
+                    <h1 class="text-capitalize my-3 text-white my-3">{{sec4.heading}}</h1>
+                    <p class="text-white-50">{{sec4.desc1}}</p>
+                </div>
+
+                <div class="rotate-astro col-12 order-md-2 order-0 astro-sec4 col-md-6">
+                    <img src="/images/s-type_asteroid.png" alt="">
+                </div>
+            </div>
+
+        </section>
+        <!-- section 4 end -->
+        <!-- section 5 start -->
+        <section id="sec5" class="sec sec5 secContent5 d-flex align-items-center  bgG-light-blue ">
+
+            <div class="row px-em-5 w-100">
+
+                <div class="col-md-6 col-12 order-md-1  sec5__content  order-1  ">
+
+                    <h1 class="text-capitalize my-3 text-white my-3">{{sec5.heading}}</h1>
+                    <p class="text-white-50">{{sec5.desc1}}</p>
+                </div>
+
+                <div class="rotate-astro col-12 order-md-2 order-0 astro-sec5 col-md-6">
+                    <img src="/images/m-type_asteroid.png" alt="">
+                </div>
+            </div>
+
+        </section>
+        <!-- section 5 end -->
+    </section>
+    <!-- footer  -->
+    <footer class="footer  d-flex justify-content-center flex-column">
+        <div class="footer__container mx-5 mt-5 mb-3 d-flex flex-column flex-md-row justify-content-md-between">
+
+            <div class="footer__useFulLinks mx-4 d-flex flex-column ">
+                <h5 style="letter-spacing: .2em;" class="text-uppercase text-opra d-block ">useful links</h5>
+                <div class="footer__links d-flex flex-column">
+                    <a href="/pages/index.html"
+                        class="text-capitalize text-white-50   text-decoration-none my-2">home</a>
+                    <a href="/pages/contactus.html"
+                        class="text-capitalize text-white-50  text-decoration-none my-2">contact us</a>
+                    <div class=" text-capitalize text-white-50 my-2 ">
+                        <div style="cursor: pointer;" class="d-flex  hover align-items-center ">
+                            <a href="/pages/discoveries.html" class="text-capitalize text-white-50">discovries</a>
+                        </div>
+                    </div>
+                    <div class=" text-capitalize text-white-50 my-2 ">
+                        <div style="cursor: pointer;" class="d-flex  hover align-items-center ">
+                            <a href="/pages/top-5-observatories.html"
+                                class="text-capitalize text-white-50">observatories</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="footer__socialLinks mx-4 d-flex flex-column">
+                <h5 style="letter-spacing: .2em;" class="text-uppercase text-opra ">follow us</h5>
+                <div class="footer__links d-flex flex-column">
+                    <a href="https://www.facebook.com/" target="_blank"
+                        class="text-capitalize align-items-center d-flex text-white-50  text-decoration-none my-3">
+                        <i class="fab fa-facebook"></i>
+                        <span class="mx-2 text-capitalize text-white-50">facebook</span>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank"
+                        class="text-capitalize align-items-center d-flex text-white-50  text-decoration-none my-3">
+                        <i class="fab fa-twitter"></i>
+                        <span class="mx-2 text-capitalize text-white-50">twitter</span>
+                    </a>
+                    <a href="https://www.linkedin.com/" target="_blank"
+                        class="text-capitalize align-items-center d-flex text-white-50  text-decoration-none my-3">
+                        <i class="fab fa-linkedin"></i>
+                        <span class="mx-2 text-capitalize text-white-50">linkedIn</span>
+                    </a>
+
+                </div>
+            </div>
+            <div class="footer__contactLinks mx-4 d-flex flex-column">
+                <h5 style="letter-spacing: .2em;" class="text-uppercase text-opra ">get in touch</h5>
+                <div class="footer__links d-flex flex-column">
+                    <a href="mailto:muhabd0336@gmail.com" target="_blank"
+                        class="align-items-center d-flex text-white-50  text-decoration-none my-3">
+                        <i class="fas fa-envelope"></i>
+                        <span class="mx-2 text-white-50">muhabd0336@gmail.com</span>
+                    </a>
+                    <a href="#" class="align-items-center d-flex text-white-50  text-decoration-none my-3">
+                        <i class="fas fa-phone"></i>
+                        <span class="mx-2 text-white-50">0331-3973207</span>
+                    </a>
+                    <a href="#" class=" d-flex text-white-50  text-decoration-none my-3">
+                        <i class="fas my-3 fa-map-marker-alt"></i>
+                        <span class="mx-2 text-white-50">D - 4 Block H North Nazimabad Town, Karachi, Karachi City,
+                            Sindh 74700, Pakistan</span>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="footer__bottom d-flex justify-content-center">
+            <p class="text-white-50">copy rights 2021 | All rights reserved</p>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
